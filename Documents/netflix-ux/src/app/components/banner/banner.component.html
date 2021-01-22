@@ -1,0 +1,35 @@
+<!-- HEADER -->
+<div id="banner" class="banner">
+  <header>
+      <div class="netflixLogo">
+      <a id="logo" href="#home"><img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt="Logo Image"></a>
+      </div>
+      <nav class="main-nav">
+          <a href="#home">Home</a>
+          <a href="#tvShows">TV Shows</a>
+          <a href="#movies">Movies</a>
+          <a href="#originals">Originals</a>
+          <a href="#">Recently Added</a>
+          <a target="_blank" href="https://codepen.io/cb2307/full/NzaOrm">Portfolio</a>
+      </nav>
+      <nav class="sub-nav">
+          <div class="form-group has-search">
+              <input type="text"  placeholder="Search" (keyup)="search($event)">
+          </div>
+      </nav>
+  </header>
+  <div class="container main-container">
+      <div class="w-90">
+          <h2 *ngIf="movie">{{movie.name}}</h2>
+          <a href="#"><i class="play fas fa-play"></i>Reproducir</a>
+          <a href="#"><i class="play fas fa-plus"></i>Mi lista</a>
+          <p *ngIf="movie">
+              {{movie.overview}}
+          </p>
+      </div>
+      <div class="w-10 r">
+          <p>R</p>
+      </div>
+  </div>
+</div>
+<!-- END OF HEADER -->

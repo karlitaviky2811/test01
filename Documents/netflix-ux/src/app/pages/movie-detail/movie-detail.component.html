@@ -1,0 +1,45 @@
+<section>
+  <div class="container-detail">
+    <div class="image-detail">
+      <img [src]="baseUrl" alt="">
+    </div>
+    <div *ngIf="movie" class="info-detail">
+      <div class="title">
+        <a href="#">
+          <h3>{{ movie.title }} ({{date}})</h3>
+        </a>
+      </div>
+      <div class="meta-actions">
+        <div class="score">
+          <div class="percentage-circle">
+            <div class="percentage-circle-stroke">
+              <div class="percent">
+                <span>{{ movie.vote_average * 10 }}%
+                </span>
+              </div>
+            </div>
+          </div>
+          <h1>Valoración</h1>
+        </div>
+        <ul>
+          <li class="add-to-list" style="cursor: pointer;">
+            <a [routerLink]="['/movies-favorite']"><i class="fas fa-list"></i></a>
+          </li>
+          <li class="favorite" style="cursor: pointer;">
+            <a (click)="addFavorite()"><i class="fas fa-heart"></i></a>
+          </li>
+          <li class="play-trailer">
+            <span><i class="fas fa-play"></i></span>
+            <a href="#">Play Trailer</a>
+          </li>
+        </ul>
+        </div>
+        <div class="about">
+          <div>
+            <h3>Resumen</h3>
+            <p>{{ movie.overview }}</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>

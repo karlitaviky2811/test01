@@ -1,0 +1,17 @@
+.shadow-custom {
+}
+
+div.card {
+    transition-property: box-shadow;
+    transition-duration: 1s;
+}
+
+div.card:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 6px 3px lightgrey;
+
+}
+
+.card-body {
+    background-color: lightgray;
+}
